@@ -6,7 +6,7 @@ class ATM:
         self.pin=0000     #Initial PIN 
         self.tr=[]
     def withdraw(self,wd):
-        p=int(input("Enter th pin : "))
+        p=int(input("Enter the pin : "))
         if(p==self.pin):
             if(self.money>wd):
                 self.money=self.money-wd
@@ -19,7 +19,7 @@ class ATM:
         else:
             print("WRONG PIN")
     def deposit(self,dp):
-        p=int(input("Enter th pin : "))
+        p=int(input("Enter the pin : "))
         if(p==self.pin):
             self.money=self.money+dp
             x=datetime.now()
@@ -47,10 +47,10 @@ class ATM:
         print("Mini Transaction history : ")
         if(k==self.pin):
             if(len(self.tr)!=0):
-                print("|-----------------------------------------------------------|")
+                print("|----------------------------------------------------------------|")
                 for i in range(len(self.tr)):
-                    print("|  {0})    {1}              |".format(i+1,self.tr[i]))
-                print("|-----------------------------------------------------------|")
+                    print("  {0})    {1}             ".format(i+1,self.tr[i]))
+                print("|----------------------------------------------------------------|")
                 print("Total balance :",self.money)
                 print("\n")
             else:
