@@ -12,10 +12,10 @@ class ATM:
                 self.money=self.money-wd
                 x=datetime.now()
                 print("Balance amount is : {0}                Transaction time : {1}\n".format(self.money,x))
-                wd= f'{x}      -{wd}'
+                wd= f'{x}         -{wd}'
                 self.tr.append(wd)
             else:
-                print("Insufficient")
+                print("Insufficient\n")
         else:
             print("WRONG PIN")
     def deposit(self,dp):
@@ -24,10 +24,10 @@ class ATM:
             self.money=self.money+dp
             x=datetime.now()
             print("Balance amount is : {0}                Transaction time : {1}\n".format(self.money,x))
-            dp= f'{x}      +{dp}'
+            dp= f'{x}         +{dp}'
             self.tr.append(dp)
         else:
-            print("WRONG PIN")
+            print("WRONG PIN\n")
     def changepin(self):
         k=int(input("Enter the previous pin : "))
         if(k==self.pin):
@@ -35,13 +35,13 @@ class ATM:
             l=int(input("Confirm the PIN : "));
             x=datetime.now()
             if(self.pin==l):
-                print("PIN succesfully updated !!           Updated time : {0}\n".format(x))
+                print("PIN successfully updated !!           Updated time : {0}\n\n".format(x))
                 j= f'{x}       PIN updated'
                 self.tr.append(j)
             else:
-                print("Try Again !!")
+                print("Try Again !!\n")
         else:
-            print("WRONG PIN")
+            print("WRONG PIN\n")
     def transaction(self):
         k=int(input("Enter the PIN : "))
         print("Mini Transaction history : ")
@@ -51,12 +51,12 @@ class ATM:
                 for i in range(len(self.tr)):
                     print("  {0})    {1}             ".format(i+1,self.tr[i]))
                 print("|----------------------------------------------------------------|")
-                print("Total balance :",self.money)
+                print("  Present balance :",self.money)
                 print("\n")
             else:
                 print("Empty Record\n")
         else:
-            print("WRONG PIN")
+            print("WRONG PIN\n")
 
 x=ATM()
 for i in range(100):
