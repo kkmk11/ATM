@@ -59,7 +59,7 @@ class ATM:
             print("WRONG PIN")
 
 x=ATM()
-for i in range(10):
+for i in range(100):
     c=int(input("1)Withdraw money\n2)Deposit money\n3)Change the pin\n4)Mini Transaction History\n5)Exit\n\nEnter the option you need : "))
     if(c==1):
         wd=int(input("Enter the amount to withdraw : "))
