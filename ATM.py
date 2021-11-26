@@ -44,7 +44,7 @@ class ATM:
             print("WRONG PIN\n")
     def transaction(self):
         k=int(input("Enter the PIN : "))
-        print("Transaction history : ")
+        print("                       Transaction history   ")
         if(k==self.pin):
             if(len(self.tr)!=0):
                 print("|----------------------------------------------------------------|")
