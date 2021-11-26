@@ -44,7 +44,7 @@ class ATM:
             print("WRONG PIN\n")
     def transaction(self):
         k=int(input("Enter the PIN : "))
-        print("Mini Transaction history : ")
+        print("Transaction history : ")
         if(k==self.pin):
             if(len(self.tr)!=0):
                 print("|----------------------------------------------------------------|")
@@ -60,7 +60,7 @@ class ATM:
 
 x=ATM()
 for i in range(100):
-    c=int(input("1)Withdraw money\n2)Deposit money\n3)Change the pin\n4)Mini Transaction History\n5)Exit\n\nEnter the option you need : "))
+    c=int(input("1)Withdraw money\n2)Deposit money\n3)Change the pin\n4)Transaction History\n5)Exit\n\nEnter the option you need : "))
     if(c==1):
         wd=int(input("Enter the amount to withdraw : "))
         x.withdraw(wd)
