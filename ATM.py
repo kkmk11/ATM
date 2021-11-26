@@ -11,8 +11,8 @@ class ATM:
             if(self.money>wd):
                 self.money=self.money-wd
                 x=datetime.now()
-                print("Balance amount is : {0}                Transaction time : {1}\n".format(self.money,x))
-                wd= f'{x}         -{wd}'
+                print("Balance amount is : {0} Rs                Transaction time : {1}\n".format(self.money,x))
+                wd= f'{x}         -{wd} Rs'
                 self.tr.append(wd)
             else:
                 print("Insufficient\n")
@@ -23,8 +23,8 @@ class ATM:
         if(p==self.pin):
             self.money=self.money+dp
             x=datetime.now()
-            print("Balance amount is : {0}                Transaction time : {1}\n".format(self.money,x))
-            dp= f'{x}         +{dp}'
+            print("Balance amount is : {0} Rs                Transaction time : {1}\n".format(self.money,x))
+            dp= f'{x}         +{dp} Rs'
             self.tr.append(dp)
         else:
             print("WRONG PIN\n")
@@ -51,7 +51,7 @@ class ATM:
                 for i in range(len(self.tr)):
                     print("  {0})    {1}             ".format(i+1,self.tr[i]))
                 print("|----------------------------------------------------------------|")
-                print("  Present balance :",self.money)
+                print("  Present balance :",self.money," Rs")
                 print("\n")
             else:
                 print("Empty Record\n")
